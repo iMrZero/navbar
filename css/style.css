@@ -1,0 +1,159 @@
+/* main rules starts */
+:root{
+    /* reset margin and padding */
+    padding: 0;
+    margin: 0;
+    /* variable part */
+    --transtion-delay: .3s;
+}
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+     box-sizing: border-box;
+}
+body{
+    font-family: 'Share Tech Mono', monospace;
+}
+ul{
+    list-style: none;
+}
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* media query start*/
+@media (min-width: 576px){
+    .container{
+        width: 540px;
+
+    }
+    
+}
+@media (min-width: 768px){
+    .container{
+        width: 720px;
+    }
+}
+@media (min-width: 992px){
+    .container{
+        width: 960px;
+    }
+}
+@media (min-width: 1200px){
+    .container{
+        width: 1140px;
+    }
+}
+/* media query end */
+/* main  rules end */
+
+/* navbar start */
+.navbar .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar .container .icon{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: wheat;
+    position: relative;
+}
+.navbar .container .icon .icon-png{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.navbar .menu{
+    position: relative;
+}
+.navbar .menu .humberger{
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.navbar .menu .humberger span{
+    background-color: #333;
+    margin-bottom: 5px;
+    height: 3px;
+}
+.navbar .menu .humberger span:first-child{
+    width: 100%;
+    transition: var(--transtion-delay);
+}
+.navbar .menu .humberger span:nth-child(2){
+    width: 100%;
+    transition: var(--transtion-delay);
+}
+.navbar .menu .humberger span:last-child{
+    width: 100%;
+    transition: var(--transtion-delay);
+}
+
+/* hover for menu bar start*/
+.navbar .menu:hover .humberger span:nth-child(1){
+    width: 80%;
+}
+.navbar .menu:hover .humberger span:nth-child(2){
+    width: 60%;
+}
+.navbar .menu:hover .humberger span:nth-child(3){
+    width: 50%;
+}
+/* hover for menu bar end*/
+.navbar .menu ul{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    min-width: 200px;
+    background-color: #f6f6f6;
+    top: calc(100% + 8px);
+    cursor: pointer;
+    display: none;
+}
+.navbar .menu ul::before{
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #f6f6f6;
+    position: absolute;
+    right: 5px;
+    top: -20px;
+}
+.navbar .menu ul li{
+    display: block;
+    padding: 15px;
+    color: #333;
+    transition: var(--transtion-delay);
+}
+.navbar .menu ul li:not(:last-child){
+    border-bottom: 1px solid #DDD;
+}
+/* hover for ul and li */
+.navbar .menu:hover ul{
+    display: block;
+}
+.navbar .menu ul li:hover{
+    padding-left: 25px;
+}
+/* hover for ul end*/
+/* .navbar .container .search{
+    border-left: 1px solid #333;
+    position: relative;
+    height: 20px;
+}
+.navbar .container .search .cstm-srch{
+    position: relative;
+    margin-left: 10px;
+    font-size: 13px;
+    transition: var(--transtion-delay);
+}
+.navbar .container .search .cstm-srch:hover{
+    font-size: 16px;
+} */
+/* navbar end */
